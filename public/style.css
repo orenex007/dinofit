@@ -1,35 +1,638 @@
-/****** Main Styling ******/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap');
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #ECF0F1;
-	text-align: center;
-}
-
-.container {
+*{
 	padding: 0;
-	margin-top: 40px;
+	margin: 0;
+	text-decoration: none;
+	box-sizing: border-box;
 }
 
-.footer {
-	margin-top: 60px;
+html{
+	scroll-behavior: smooth;
 }
 
-ol {
-	list-style-position: inside;
-}
-ul {
-	list-style-type: none;
+.max-width{
+	max-width: 1400px;
+	padding: 0 80px;
+	margin: auto;
 }
 
-a {
-	color: #2574A9;
-}
-/****** Logo Div Styling ******/
 
-img {
-	margin: 20px auto 0 auto;
+/* navbar style */
+
+.navbar{
+	position: fixed;
+	right: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 30px 0;
+	margin-right: 0px;
+	/*background: #f2760e;*/
+	font-family: "Oswald", sans-serif;
+	transition: all 0.3s ease; /*I will add transition: all 0.3s ease later*/
+}
+
+.navbar.sticky{
+	background: #f2760e;
+	padding: 15px;
+	transition: all 0.3s ease;
+}
+
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+.navbar .logo a{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;	
+}
+
+.navbar.sticky .logo a{
+	color: #fff;
+}
+.navbar .logo a span{
+	transition: all 0.3s ease;
+	color: #f2760e;
+}
+
+.navbar.sticky .logo a span{
+	color: #fff;
+}
+
+.navbar .menu li{
+	display: inline-block;
+	list-style: none; 
+	margin-right: 0;
+}
+
+.navbar .menu li a{ /*******Maybe I will add this display block later *****/
 	display: block;
+	color: #f2760e;
+	font-size: 18px;
+	margin-left: 25px;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+	color: #fff;
+}
+
+.navbar.sticky .menu li a{
+	color: #fff;
+}
+
+.navbar.sticky .menu li a:hover{
+	color: #dedede;
+}
+
+
+/* menu btn style */
+.menu-btn{
+	display: none;
+	color: #f2760e;
+	font-size: 23px;
+	cursor: pointer;
+}
+
+
+
+/*home section style*/
+
+.home{
+	display: flex;
+	background: url("../public/img/dinofit_home.png") no-repeat center;
+	height: 100vh;
+	min-height: 500px;
+	background-size: 100% 100%;
+	font-family: "Oswald", sans-serif;
+	background-attachment: fixed;
+	color: #fff;
+}
+
+.home .max-width{
+	margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+	font-size: 45px;
+	font-weight: 600;
+}
+
+.home .home-content .text-1 span{
+	font-size: 50px;
+	color: #f2760e;
+}
+
+.home .home-content .text-2{
+	font-size: 40px;
+	font-weight: 500;
+	margin-left: -3px;  
+}
+
+.home .home-content .text-3{
+	font-size: 30px;
+	font-weight: 600; 
+	margin: 5px 0;
+}
+
+.home .home-content a{
+	display: inline-block;
+	color: #f2760e;
+	font-size: 25px;
+	font-weight: 400;
+	border: 3px solid #f2760e;
+	border-radius: 6px;
+	background: none;
+	margin-top: 20px;
+	padding: 12px 20px;
+	transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+	background: #fff;
+}
+
+/*all similar content style code */
+
+section{
+	padding: 100px 0;
+}
+
+.about, .outTraining, .contact, footer{
+	font-family: "Roboto", sans-serif;
+}
+
+.about .about-content,
+.outTraining .outTraining-content,
+.contact .contact-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section .title{
+	position: relative;
+	font-size: 30px;
+	font-family: "Oswald", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+}
+
+section .title::before{
+	position: absolute;
+	content: "";
+	bottom: 0px;
+	height: 3px;
+	width: 265px;
+	left: 50%;
+	background: #111;
+	transform: translateX(-50%);
+}
+
+section .title::after{
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	padding: 3px;
+	font-size: 20px;
+	background: #fff;
+	color: #f2760e;
+	transform: translateX(-50%);
+}
+/*about section style */
+
+.about .title::after{
+	content: "Dean Koren";
+}
+
+.about .about-content .left{
+    width: 50%;
+    margin: 0 auto 60px;
+    justify-content: center;
+    display: flex;
+}
+
+.about .about-content .left video{
+	width: 640px;
+	height: 360px;
+	border-radius: 6px;
+	object-fit: cover; 
+}
+
+.about .about-content .right{
+	width: 40%;
+}
+
+.about .about-content .right .text{
+	font-size: 35px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+	color: #f2760e;
+}
+
+.about .about-content .right .text p{
+	text-align: justify;
+}
+
+/*outTraining section style*/
+.outTraining, .contact{
+	background: #191919;
+	color: #fff;
+}
+
+.outTraining .title::before, .contact .title::before{
+	background: #fff;
+}
+
+.outTraining .title::after, .contact .title::after{
+	content: "3 packages of training";
+	background: #191919;
+}
+
+.outTraining .outTraining-content .card{
+	width: calc(33% - 20px);
+	height: 305px;
+	background: #222;
+	border-radius: 6px;
+	padding: 25px 35px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.outTraining .outTraining-content .card:hover{
+	background: #f2760e;
+}
+
+.outTraining .outTraining-content .card .box{
+	transition: all 0.3s ease;
+}
+
+.outTraining .outTraining-content .card:hover{
+	transform: scale(1.05);
+}
+
+.outTraining .outTraining-content .card i{
+	color: #f2760e;
+	font-size: 50px;
+	transition: all 0.3s ease;
+}
+
+.outTraining .outTraining-content .card:hover i{
+	color: #fff;
+}
+
+.outTraining .outTraining-content .card .text{
+	font-size: 24px;
+	font-weight: 500;
+	margin: 10px 0 9px 0;
+}
+
+/*contant section style*/
+
+.contact .title::after{
+	content: "you can to send me :)";
+}
+
+.contact .contact-content .column{
+	width: calc(50% - 30px);
+}
+
+.contact .contact-content .text{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+	justify-content: space-between;
+}
+
+.contact .contact-content .left .icons{
+	font-size: 25px;
+	margin: 30px 0;
+}
+
+.contact .contact-content .row{
+	display: flex;
+	align-items: center;
+}
+
+.contact .contact-content .row i{
+	font-size: 25px;
+	color: #f2760e;
+}
+
+.contact .contact-content .row .info{
+	margin-left: 30px;
+}
+
+.contact .contact-content .row .info .head{
+	font-weight: 500;
+	color: #fff;
+}
+
+.contact .contact-content .row .info .sub-title{
+	color: #e5e5e5;
+}
+
+.contact .contact-content .center .card{
+	width: 100%;
+	/*background: #222;*/
+	text-align: center;
+	margin: 30px 0 9px 0;
+	transition: all 0.3s ease;
+	height: 100px;
+}
+
+.contact .contact-content .center .card:hover{
+	background: #f2760e;
+}
+
+.contact .contact-content .center .card .box{
+	transition: all 0.3s ease;
+	position: relative;
+	top: 5px;
+}
+
+.contact .contact-content .center .card:hover{
+	transform: scale(1.05);
+}
+
+.contact .contact-content .center .card i{
+	color: #f2760e;
+	font-size: 25px;
+	transition: all 0.3s ease;
+}
+
+.contact .contact-content .center .card:hover i{
+	color: #fff;
+}
+
+.contact .contact-content .center .card .text{
+	font-size: 24px;
+	font-weight: 500;	
+	color: #fff;
+}
+/*.contact .contact-content .right{\
+	width: 100%;
+}*/
+/*.contact .right form .fields{
+	display: flex;
+}
+
+.contact .right form .fields,
+.contact .right form .fields .field{
+	height: 40px;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.contact .right form .textarea{
+	height: 80px;
+	width: 100%;
+	margin-left: 10px;
+}
+
+.contact .right form .name{
+	margin-right: 10px;
+}
+
+.contact .right form .phone{
+	margin-left: 10px; 
+}
+
+.contact .right form .email{
+	margin-left: 10px; 
+}
+
+.contact .right form .textarea{
+	margin-left: 10px; 
+}
+
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+	width: 100%;
+	height: 200%;
+	border: 1px solid #f2760e;
+	border-radius: 6px;
+	outline: none;
+	padding: 0 17px;
+	font-size: 17px;
+	font-family: "Oswald", sans-serif;
+}
+
+.contact .right form .textarea textarea{
+	padding-top: 10px;
+	resize: none;
+}
+.contact .right form .button{
+	height: 200%;
+	width: 170px;
+	margin-left: 10px;
+}
+
+.contact .right form .button button{
+	width: 100%;
+	height: 100%;
+	border: 2px solid #f2760e;
+	background: #f2760e;
+	color: #fff;
+	border-radius: 6px;
+	font-size: 20px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}*/
+
+footer{
+	background: #111;
+	padding: 20px 23px;
+	color: #fff
+}
+
+footer span a{
+	color: #f2760e;
+	text-decoration: none;
+}
+
+footer span a:hover{
+	text-decoration: underline;
+}
+
+/*responsive media query */
+@media (min-width: 1360px){
+	.navbar .max-width .logo a{
+		margin: -60px;
+	}
+}
+@media (max-width: 1300px){
+	.home .max-width{
+		margin-left: 0px;
+	}
+}
+
+@media (max-width: 1254px){
+	.about .about-content .right{
+		flex: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 1116px){
+	.max-width{
+		padding: 0 65px;
+	}
+}
+
+@media (max-width: 915px){
+	.max-width{
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 778px){
+	.home{
+		background-color: #111;
+		background: url("../public/img/dinofit_home_media2.png") no-repeat center;
+		/*display: flex;*/
+		/*height: 100vh;*/
+		/*min-height: 500px;*/
+		background-size: cover;
+		/*font-family: "Oswald", sans-serif;*/
+		background-attachment: fixed;
+		/*color: #fff;*/
+	}
+	
+	.max-width{
+		/*padding: 0 15px;*/
+		max-width: 800px;
+	}
+
+	.home .max-width{
+		margin: auto auto 0;
+		/*position: relative;*/
+		/*bottom: 50px;*/
+	}
+	.menu-btn{
+		display: block;
+		z-index: 999;
+	}
+	.menu-btn i.active:before{
+		content: "\f00d";
+	}
+
+	.navbar .menu{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: -100%;
+		padding-top: 80px;
+		background: #111;
+		text-align: center;
+	}
+	.navbar.sticky .menu-btn{/*color of menu-btn change*/
+		color: #fff;
+	}
+	.navbar .menu.active{
+		left: 0;
+		transition: all 0.3s ease;
+	}
+	.navbar.sticky .menu-btn i.active{
+		color: #f2760e;
+	}
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 40px 0;
+		font-size: 30px;
+	}
+
+	.navbar .menu.active li a{
+		color: #f2760e;
+	}
+
+
+
+	.about .about-content .column{
+		width: 50%;
+	}
+	.about .about-content .left{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 60px;
+	}
+
+	.outTraining .outTraining-content .card{
+		width: calc(50% - 10px);
+		margin-bottom: 20px;
+		width: 100%;
+		height: 50%;
+	}
+
+	.contact .contact-content .right .fields{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto 60px;
+	}
+}
+    
+
+@media (max-width: 674px){
+	.home{
+		background: #111;
+	}
+	.home .max-width{
+		margin: auto auto;
+	}
+
+	.contact .contact-content .column{
+		width: 100%;
+	}
+	.contact .contact-content .left .row{
+		display: flex;
+    	justify-content: center;
+	}
+}
+
+@media (max-width: 531px){
+	.about .about-content .left video{
+		width: 400px;
+	}
+}
+
+@media (max-width: 430px){
+	.home{
+		text-align: center;
+	}
+	.about .about-content .left video{
+		width: 310px;
+	}
+
+	.outTraining .title::after{
+		font-size: 18px;
+		width: 164px;
+		margin-bottom: -3px;
+	}
+
+	.contact .title::after{
+		font-size: 19px;
+		width: 164px;
+		margin-bottom: -3px;
+	}
+
 }

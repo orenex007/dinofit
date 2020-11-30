@@ -1,18 +1,183 @@
 <!DOCTYPE html>
 <html>
-
-   <head>
-      <title>Backend Challenges | Free Code Camp</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
-
-   <body>
-      <div class="container">
-         <h1>Manage Node.js projects and npm packages using package.json</h1>
-         <h3>Part 1 of Free Code Camp Backend Challenges</h3>
-      </div>
-   </body>
-
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../public/style.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
+	<title>Dinofit personal trainer</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="max-width">
+				<div class="logo"><a href="#">Dino<span>fit</span></a></div>
+				<ul class="menu">
+					<li><a href="#home" class="menu-btn">Home</a></li>
+					<li><a href="#about" class="menu-btn">About</a></li>
+					<li><a href="#outTraining" class="menu-btn">Our Training</a></li>
+					<li><a href="#contact" class="menu-btn">Contact</a></li>
+				</ul>
+				<div class="menu-btn">
+					<i class="fas fa-bars"></i>
+				</div>
+			</div>
+		</nav>
+	</header>
+<!----------------Home section -------------------------->
+	<section class="home" id="home">
+		<div class="max-width">
+			<div class="home-content">
+				<div class="text-1">Welcome to Dino<span>fit</span>!</div>
+				<div class="text-2">My name is Dean Koren</div>
+				<div class="text-3">and I am personal trainer</div>
+				<a href="#contact">contact me!</a>
+			</div>
+		</div>
+	</section>
+<!----------------About section -------------------------->
+	<section class="about" id="about">
+		<div class="max-width">
+			<h2 class="title">About me</h2>
+			<div class="about-content">
+				<div class="column left">
+					<video controls>
+						<source src="../public/dinofit_video.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="column right">
+					<p>I pass a fitness and gymnastics trainer course at Wingate extension</p>
+					<div class="text"><span class="typing-1"></span>trainer</div>
+					<p>The Rishon Lezion area at the customer's home/the park</p>
+				</div>
+			</div>
+		</div>
+	</section>
+<!----------------Our Training section -------------------------->
+	<section class="outTraining" id="outTraining">
+		<div class="max-width">
+			<h2 class="title">Out Training</h2>
+			<div class="outTraining-content">
+				<div class="card">
+					<div class="box">
+						<i class="fas fa-user"></i>
+						<div class="text">Personal fitness trainer </div>
+						<p>Personal fitness trainer to the house. Weight loss, building muscle mass, slimming, achieving goals, toning.</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="box">
+						<i class="fas fa-user-friends"></i>
+						<div class="text">Pair fitness trainer</div>
+						<p>Personal fitness trainer. Weight loss, building muscle mass, slimming, achieving goals, toning</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="box">
+						<i class="fas fa-users"></i>
+						<div class="text">Group fitness trainer</div>
+						<p>Group training(up to 4 people)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!----------------Contact section -------------------------->
+	<section class="contact" id="contact">
+		<div class="max-width">
+			<h2 class="title">Contact me!</h2>
+			<div class="contact-content">
+				<div class="column left">
+					<div class="icons">
+						<div class="row">
+							<i class="fas fa-user"></i>
+							<div class="info">
+								<div class="head">Name</div>
+								<div class="sub-title">Dean Koren</div>
+							</div>
+						</div>
+					</div>
+					<div class="icons">
+						<div class="row">
+							<i class="fas fa-map-marker-alt"></i>
+							<div class="info">
+								<div class="head">Address</div>
+								<div class="sub-title">Bernizky 39, <br>rishon lezion</div>
+							</div>
+						</div>
+					</div>
+					<div class="icons">
+						<div class="row">
+							<i class="fas fa-phone-alt"></i>
+							<div class="info">
+								<div class="head">Phone</div>
+								<div class="sub-title">050-259-2222</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column center">
+					<div class="card">
+						<a href="https://wa.me/972502592222">
+							<div class="box">
+								<i class="fab fa-whatsapp"></i>
+								<div class="text">Whatsapp</div>
+								<p class="text">Send me the message</p>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="https://www.facebook.com/dean.koren">
+							<div class="box">
+								<i class="fab fa-facebook"></i>
+								<div class="text">Facebook</div>
+								<p class="text">Send me the message</p>
+							</div>
+						</a>
+					</div>
+					<div class="card">
+						<a href="https://www.instagram.com/dean__koren">
+							<div class="box">
+								<i class="fab fa-instagram"></i>
+								<div class="text">Instagram</div>
+								<p class="text">Send me the message</p>
+							</div>
+						</a>
+					</div>
+				</div>
+<!-- 				<div class="column right">
+					<div class="text">Message me</div>
+					<form action="#">
+						<div class="fields">
+							<div class="field name">
+								<input type="text" name="text" placeholder="Your Name(required)" required>
+							</div>
+							<div class="field phone">
+								<input type="phone" name="phone" placeholder="Your Phone(required)" required>
+							</div>
+							<div class="field email">
+								<input type="email" name="email" placeholder="Your Email(required)" required>
+							</div>
+							<div class="field textarea">
+								<textarea cols="30" rows="10" placeholder="Message"></textarea>
+							</div>
+							<div class="button">
+								<button type="submit">Send message</button>
+							</div>
+						</div>
+					</form>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	<!-------------Footer section ------------------------>
+	<footer>
+		<span>Create by <a href="#">Oren Abarbanel</a> |<br> <span class="far fa-copyright"></span>2020 All right reseved.</span>
+	</footer>
+<script type="text/javascript" src="../public/script.js"></script>
+</body>
 </html>
+
+
